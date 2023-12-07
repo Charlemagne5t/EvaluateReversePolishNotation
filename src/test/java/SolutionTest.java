@@ -23,6 +23,22 @@ public class SolutionTest {
         String[] tokens = {"10","6","9","3","+","-11","*","/","*","17","+","5","+"};
         int expected = 22;
         int actual = new Solution().evalRPN(tokens);
+        /* (9 + 3) * -11 */
+        Assert.assertEquals(expected, actual);
+    }
+    @Test
+    public void evalRPNTest4(){
+        String[] tokens = {"3","11","+","5","-"};
+        int expected = 9;
+        int actual = new Solution().evalRPN(tokens);
+
+        Assert.assertEquals(expected, actual);
+    }
+    @Test
+    public void evalRPNTest5(){
+        String[] tokens = {"4","3","-"};
+        int expected = 1;
+        int actual = new Solution().evalRPN(tokens);
 
         Assert.assertEquals(expected, actual);
     }
